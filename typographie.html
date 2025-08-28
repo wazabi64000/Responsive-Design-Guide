@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typographie responsive</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Typographie Responsive</h1>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="mise-en-page.html">Mise en page</a></li>
+        <li><a href="images-media.html">Images & médias</a></li>
+        <li><a href="typographie.html" aria-current="page">Typographie</a></li>
+        <li><a href="interactivite.html">Interactivité</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p>
+        Une typographie responsive s'adapte à toutes les tailles d'écran pour offrir une lecture confortable et hiérarchisée.
+      </p>
+    </section>
+
+    <section id="exemples">
+      <h2>Exemples de code</h2>
+
+      <h3>Unités relatives</h3>
+      <pre><code>body {
+  font-size: 1rem; /* 16px */
+}
+h1 { font-size: 2rem; } /* 32px */
+p { font-size: 1rem; }</code></pre>
+
+      <h3>Media queries pour mobile</h3>
+      <pre><code>@media (max-width: 768px) {
+  body { font-size: 0.9rem; }
+  h1 { font-size: 1.5rem; }
+}</code></pre>
+
+      <h3>Typographie fluide avec vw</h3>
+      <pre><code>h2 {
+  font-size: 3vw; /* s'adapte à la largeur de l'écran */
+}</code></pre>
+    </section>
+
+    <section id="ressources">
+      <h2>Ressources</h2>
+      <ul>
+        <li><a href="https://www.smashingmagazine.com/2016/05/fluid-typography/" target="_blank">Smashing Magazine – Fluid Typography</a></li>
+        <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/font-size" target="_blank">MDN – font-size</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Guide Responsive Design | Thème sombre</p>
+  </footer>
+</body>
+</html>

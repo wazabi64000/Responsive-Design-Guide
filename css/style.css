@@ -1,0 +1,141 @@
+:root {
+  --bg-dark: #121212;
+  --bg-section: #1e1e1e;
+  --primary: #bb86fc;
+  --secondary: #03dac6;
+  --text: #e0e0e0;
+  --text-muted: #b0b0b0;
+  --link: #03dac6;
+  --link-hover: #bb86fc;
+  --code-bg: #2a2a2a;
+  --focus: #ff6e40;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-dark);
+  color: var(--text);
+}
+
+header {
+  background: var(--bg-section);
+  color: var(--text);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+nav a {
+  color: var(--link);
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover, nav a:focus, nav a[aria-current="page"] {
+  background: var(--primary);
+  color: var(--bg-dark);
+  outline: 3px solid var(--focus);
+}
+
+main {
+  max-width: 1000px;
+  margin: 1.5rem auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+  padding: 1rem;
+  background: var(--bg-section);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+h1, h2, h3 {
+  color: var(--primary);
+}
+
+p, li {
+  color: var(--text);
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+pre {
+  background: var(--code-bg);
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  color: var(--secondary);
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background: var(--primary);
+  color: var(--bg-dark);
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: var(--secondary);
+  color: var(--bg-dark);
+}
+
+button:focus {
+  outline: 3px solid var(--focus);
+  box-shadow: 0 0 10px var(--focus);
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  background: var(--bg-section);
+  color: var(--text-muted);
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  section {
+    padding: 0.8rem;
+  }
+}

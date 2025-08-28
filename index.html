@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guide Responsive Design - Sombre</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Guide complet Responsive Design</h1>
+    <p>Créez des sites modernes et adaptatifs pour tous les écrans.</p>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html" aria-current="page">Accueil</a></li>
+        <li><a href="mise-en-page.html">Mise en page</a></li>
+        <li><a href="images-media.html">Images & médias</a></li>
+        <li><a href="typographie.html">Typographie</a></li>
+        <li><a href="interactivite.html">Interactivité</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p>
+        Le Responsive Design permet à vos sites web de s’adapter automatiquement à tous les appareils, 
+        garantissant ainsi une expérience utilisateur optimale sur mobile, tablette et desktop.
+      </p>
+      <p>Ce guide vous fournit des <strong>techniques modernes</strong>, des <strong>exemples concrets</strong> et des <strong>ressources utiles</strong> pour maîtriser le design adaptatif.</p>
+    </section>
+
+    <section id="ressources">
+      <h2>Ressources utiles</h2>
+      <ul>
+        <li><a href="https://developer.mozilla.org/fr/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank">MDN – Responsive Design</a></li>
+        <li><a href="https://css-tricks.com/snippets/css/media-queries-for-standard-devices/" target="_blank">CSS Tricks – Media Queries</a></li>
+        <li><a href="https://caniuse.com/" target="_blank">Can I Use – Compatibilité navigateurs</a></li>
+        <li><a href="https://www.responsinator.com/" target="_blank">Responsinator – Tester mobile</a></li>
+      </ul>
+    </section>
+
+    <section id="exemple">
+      <h2>Exemple simple HTML/CSS responsive</h2>
+      <pre><code>&lt;div class="container"&gt;
+  &lt;div class="item"&gt;Bloc 1&lt;/div&gt;
+  &lt;div class="item"&gt;Bloc 2&lt;/div&gt;
+  &lt;div class="item"&gt;Bloc 3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.item {
+  flex: 1 1 250px;
+  background: #bb86fc;
+  color: #121212;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .item { flex: 1 1 100%; }
+}
+&lt;/style&gt;</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Guide Responsive Design | Thème sombre | Tous droits réservés</p>
+  </footer>
+</body>
+</html>

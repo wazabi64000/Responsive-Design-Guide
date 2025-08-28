@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mise en page Responsive</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Mise en page Responsive</h1>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="mise-en-page.html" aria-current="page">Mise en page</a></li>
+        <li><a href="images-media.html">Images & médias</a></li>
+        <li><a href="typographie.html">Typographie</a></li>
+        <li><a href="interactivite.html">Interactivité</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p>
+        La mise en page responsive permet à vos contenus de s'adapter automatiquement à toutes les tailles d’écran grâce à Flexbox et CSS Grid. 
+        Elle garantit un affichage harmonieux et lisible sur mobile, tablette et desktop.
+      </p>
+    </section>
+
+    <section id="solutions">
+      <h2>Techniques et bonnes pratiques</h2>
+      <ul>
+        <li>Utiliser <code>display: flex;</code> et <code>flex-wrap: wrap;</code> pour des conteneurs flexibles.</li>
+        <li>CSS Grid pour des layouts complexes mais adaptatifs avec <code>repeat(auto-fit, minmax(...))</code>.</li>
+        <li>Unités relatives (<code>%, em, rem, vw</code>) plutôt que fixes.</li>
+        <li>Media queries pour ajuster colonnes et marges selon la largeur de l’écran.</li>
+      </ul>
+    </section>
+
+    <section id="exemples">
+      <h2>Exemples améliorés</h2>
+
+      <h3>Flexbox responsive</h3>
+      <pre><code>&lt;div class="flex-container"&gt;
+  &lt;div class="flex-item"&gt;1&lt;/div&gt;
+  &lt;div class="flex-item"&gt;2&lt;/div&gt;
+  &lt;div class="flex-item"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.flex-item {
+  flex: 1 1 200px;
+  background: #bb86fc;
+  color: #121212;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+}
+@media (max-width: 768px) {
+  .flex-item { flex: 1 1 100%; }
+}
+&lt;/style&gt;</code></pre>
+
+      <h3>CSS Grid responsive</h3>
+      <pre><code>.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.grid-item {
+  background: #03dac6;
+  color: #121212;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+}</code></pre>
+    </section>
+
+    <section id="ressources">
+      <h2>Ressources</h2>
+      <ul>
+        <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">CSS Grid Guide – CSS Tricks</a></li>
+        <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Flexible_Box_Layout" target="_blank">Flexbox – MDN</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Guide Responsive Design | Thème sombre</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Images & Médias Adaptatifs</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Images et Médias Adaptatifs</h1>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="mise-en-page.html">Mise en page</a></li>
+        <li><a href="images-media.html" aria-current="page">Images & médias</a></li>
+        <li><a href="typographie.html">Typographie</a></li>
+        <li><a href="interactivite.html">Interactivité</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p>
+        Les médias doivent être flexibles pour ne pas déformer le layout et optimiser la vitesse de chargement. Utilisez <code>srcset</code>, <code>&lt;picture&gt;</code> et CSS responsive.
+      </p>
+    </section>
+
+    <section id="exemples">
+      <h2>Exemples pratiques</h2>
+
+      <h3>Image responsive CSS</h3>
+      <pre><code>img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}</code></pre>
+
+      <h3>Image avec srcset</h3>
+      <pre><code>&lt;img src="small.jpg"
+     srcset="small.jpg 480w, medium.jpg 768w, large.jpg 1200w"
+     sizes="(max-width: 768px) 100vw, 50vw"
+     alt="Exemple image responsive"&gt;</code></pre>
+
+      <h3>Vidéo responsive</h3>
+      <pre><code>.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.video-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+}</code></pre>
+    </section>
+
+    <section id="ressources">
+      <h2>Ressources</h2>
+      <ul>
+        <li><a href="https://web.dev/learn/design/responsive/" target="_blank">Web.dev – Responsive Design</a></li>
+        <li><a href="https://css-tricks.com/using-pictures/" target="_blank">Using &lt;picture&gt; – CSS Tricks</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Guide Responsive Design | Thème sombre</p>
+  </footer>
+</body>
+</html>
